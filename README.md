@@ -1,3 +1,6 @@
+# WireShark
+Wireshark is software that is widely used in the analysis of data packets in a network. Wireshark is completely free and open source. This packet analyzer is used for a variety of purposes like troubleshooting networks, understanding communication between two systems, developing new protocols, etc. The original name of Wireshark was Ethereal which was changed in 2006 due to some company’s copyright issues. This software is written in C and C++, and its initial release was in the year 1998. Its latest release is 3.6.0 which got released on 22 November 2021. Wireshark is a cross-platform software, it can be run on Linux, windows, mac, and any other operating system.
+
 # Install and Use Wireshark on Ubuntu 20.04 LTS
 
 Wireshark is an open-source network protocol analyzer tool indispensable for system administration and security. It drills down and displays data travelling on the network. Wireshark allows you to either capture live network packets or to save it for offline analysis.
@@ -77,9 +80,6 @@ To display only the TCP packets from all the captured packets, type tcp. After e
 
 That’s how you can install and use Wireshark on Ubuntu 20.04 LTS system. We have just discussed the basics of the Wireshark tool. In order to have a solid grasp on Wireshark, you need to go through all of the features and experiment with them.
 
-#  Install Wireshark on Windows
-
-Wireshark is software that is widely used in the analysis of data packets in a network. Wireshark is completely free and open source. This packet analyzer is used for a variety of purposes like troubleshooting networks, understanding communication between two systems, developing new protocols, etc. The original name of Wireshark was Ethereal which was changed in 2006 due to some company’s copyright issues. This software is written in C and C++, and its initial release was in the year 1998. Its latest release is 3.6.0 which got released on 22 November 2021. Wireshark is a cross-platform software, it can be run on Linux, windows, mac, and any other operating system. 
 
 # Installing Wireshark on Windows:
 Follow the below steps to install Wireshark on Windows:
