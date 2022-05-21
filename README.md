@@ -1,49 +1,51 @@
-Install Nessus Scanner on Ubuntu 20.04 LTS server
-********************************************************************************
-Download Nessus Scanner: 
-************************
-https://www.tenable.com/downloads/nessus?loginAttempted=true 
+Wireshark is an open-source network protocol analyzer tool indispensable for system administration and security. It drills down and displays data travelling on the network. Wireshark allows you to either capture live network packets or to save it for offline analysis.
 
-Installation of Nessus Scanner:
-******************************
-sudo dpkg -i Nessus-10.1.1-ubuntu1110_amd64
+One of the features of Wireshark that you will love to learn is the display filter which lets you inspect only that traffic you are really interested in. Wireshark is available for various platforms including Windows, Linux, MacOS, FreeBSD, and some others.
 
-Enable & Start Scanner services:
-*******************************
-sudo systemctl enable nessusd
+Some of the tasks one can perform with Wireshark are
 
-sudo systemctl status nessusd
+Capturing and finding traffic passing through your network
+Inspection of hundreds of different protocols
+Live capture of traffic/offline analysis
+Troubleshooting dropped packets and latency problems
+Looking at attempts of attacks or malicious activities
+In this article, we will explain how to install Wireshark on the Ubuntu system. The installation procedures have been tested on Ubuntu 20.04 LTS.
 
+Note:
 
-Install Nessus Scanner on Windows Server:
-****************************************************************
-Download Nessus Scanner: 
-************************
-https://www.tenable.com/downloads/nessus?loginAttempted=true 
+We have used the command line Terminal for the installation procedure. You can launch the Terminal via Ctrl+Alt+T keyboard shortcut.
+You must be a root user or have sudo privileges in order to install and use Wireshark to capture data on your system.
+Installing Wireshark
+For installing Wireshark, you will need to add the “Universe” repository. Issue the following command in Terminal to do so:
 
-Installation of Nessus Scanner:
-******************************
-Run Nessus-10.1.1-x64.msi
+$ sudo add-apt-repository universe
+Now issue the following command in Terminal to install Wireshark on your system:
 
+$ sudo apt install Wireshark
+When prompted for a password, type sudo password.
+After running the above command, you might be asked for confirmation, hit y, and then hit Enter, after which installation of Wireshark will be started in your system.
 
-Go to the browser
-https://server-ip-address:8834
+During the installation of Wireshark, the following window will appear asking you if you want to allow non-superusers to capture packets. Enabling it can be a security risk, so it is better to leave it disabled and hit Enter.
+Once the installation of Wireshark is completed, you can verify it using the following command in Terminal:
+$ wireshark --version
+If Wireshark has installed successfully, you will a similar output displaying the version of Wireshark installed.
 
-The first step is to select how to install Nessus on the Welcome to Nessus page. (Nessus Essentials, Nessus Professional and Nessus Manager)
-the next step, you must click Continue.Note that if you selected Nessus Professional or Nessus Manager in the previous section, the Register Nessus page will appear.
- 
-Now if you have selected Nessus Essentials, do one of the following:
-If you need an activation code, type your name and email address on the activation code download page. Then click on the Email. You can now check your email for your free activation code.
-Note that if you already have the activation code, click Skip. 
+Launch Wireshark
+Now you are ready to launch and use Wireshark on your Ubuntu machine. In order to launch Wireshark, issue the following command in Terminal:
+$ sudo wireshark
+If you are logged in as a root user, you can also launch Wireshark form the GUI. Hit the super key and type wireshark in the search bar. When the icon for the Wireshark appears, click on it to launch it.
+Remember you will not be able to capture network traffic if you launch Wireshark without root or sudo privilege.
 
-After completing the above steps, you must now type your activation code on the Register Nessus page.
+When the Wireshark opens, you will see the following default view:
+Using Wireshark
+Wireshark is a powerful tool with plenty of features. Here we will just go through the basics of the two important features that are: packet capture and display filter.
 
-Click on Continue to create an account page.
+Packet Capture
+In order to capture packets using Wireshark, follow the below simple steps:
 
-You can now create a Nessus Admin account that you use to log in to Nessus. Here you have to click on Submit after entering a username and password.
+1. From the list of available network interfaces in the Wireshark window, select the interface on which you want to capture packets.
 
-Nessus completes the configuration process by doing the above.
+2. From the toolbar at the top, click the start button to start capturing the packets on the selected interface as shown in the following screenshot.
 
-********Activition Code: BHNN-BLZ9-8C4C-F6GV-WXWR
-********UserId: admin
-********Password: 123
+<img width="424" alt="image" src="https://user-images.githubusercontent.com/65080702/169664410-bf0076bb-d80a-4665-8e94-4ef2247cba30.png">
+
