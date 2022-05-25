@@ -6,13 +6,13 @@ https://www.tenable.com/downloads/nessus?loginAttempted=true
 
 Installation of Nessus Scanner:
 ******************************
-sudo dpkg -i Nessus-10.1.1-ubuntu1110_amd64
+`sudo dpkg -i Nessus-10.1.1-ubuntu1110_amd64`
 
 Enable & Start Scanner services:
 *******************************
-sudo systemctl enable nessusd
+`sudo systemctl enable nessusd`
 
-sudo systemctl status nessusd
+`sudo systemctl status nessusd`
 
 
 Install Nessus Scanner on Windows Server:
