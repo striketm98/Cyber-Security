@@ -44,6 +44,6 @@ You can now create a Nessus Admin account that you use to log in to Nessus. Here
 
 Nessus completes the configuration process by doing the above.
 
-********Activition Code: BHNN-BLZ9-8C4C-F6GV-WXWR
-********UserId: admin
-********Password: 123
+Activition Code: `BHNN-BLZ9-8C4C-F6GV-WXWR`
+UserId: `admin`
+Password: `123`
