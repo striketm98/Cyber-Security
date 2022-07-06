@@ -1,15 +1,14 @@
-********************************Purpose************************************
-Determination live hsot 
-Discovery of Network Topology 
-Finding open Ports
-Detecting versions
-Detecting os
-Finding vulnerability 
+## Purpose
+* Determination live hsot 
+* Discovery of Network Topology 
+* Finding open Ports
+* Detecting versions
+* Detecting os
+## Finding vulnerability 
 
-******CISM(Certified Information Security Management)
+* CISM(Certified Information Security Management)
 
-*************Laboratory Set up***********************************************
-*****Virtualization Network 
+Virtualization Network 
 NAT
 DHCP
 
