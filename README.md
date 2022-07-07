@@ -54,10 +54,10 @@ are:
 
 Mainly I given the sql payload into the login pages where I can check that used DBMS is vulnerable or not 
 
-|**Tools used:**|Brup-suit |
+|**Tools used:**|Brup-suit|
 | :- | :- |
 |<p>**Risk Rating:**  </p><p></p>|<p>**HIGH** </p><p></p>|
-|<p>**Attack Type:**</p><p></p>|<p>**Brute force **</p><p></p>|
+|<p>**Attack Type:**</p><p></p>|<p>**Sql_Injection**</p><p></p>|
 
 ## **Testing  method:** 
 Connect the forward proxy with  the burp-suit into the search then try to test the post request is working using the payload 
