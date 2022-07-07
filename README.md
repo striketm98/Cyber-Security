@@ -15,6 +15,6 @@ The web application  is running into the http server where the ssl is not active
 Though Tool of Wireshark, we just get the network packet into the website and  received packet send the response simple text format so , we got the username and password which is client using for get into the website. 
 
 ## Remediation:
-Add new  SSL Certification with advanced Cryptographic method. 
+* Add new  SSL Certification with advanced Cryptographic method. 
 
 
