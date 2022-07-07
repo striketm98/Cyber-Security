@@ -1,4 +1,4 @@
-﻿# Security Testing:
+# Security Testing:
 ## Url: <http://demo.testfire.net/>
 ## Risk Statement:
 The web application  is running into the http server where the ssl is not active. For the reason the post   request should be go with simple text format into the server.  
@@ -26,5 +26,5 @@ The web application  is running into the http server where the ssl is not active
 
 
 ## Remediation:
-Add new  SSL Certification with advanced Cryptographic method. 
+* Add new  SSL Certification with advanced Cryptographic method. 
 
