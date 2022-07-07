@@ -18,7 +18,7 @@ Though Tool of Wireshark, we just get the network packet into the website and  r
 ## Remediation:
 * Add new  SSL Certification with advanced Cryptography
 
-# Risk Statement:
+## Risk Statement:
 The web application is using java servlet server response. The web-application running into http server but the application is reflected DOM  
 
 |**Tools used:**|NA|
@@ -26,7 +26,7 @@ The web application is using java servlet server response. The web-application r
 |<p>**Risk Rating:**  </p><p></p>|<p>**HIGH** </p><p></p>|
 |<p>**Attack Type:**</p><p></p>|<p>**REFLECTED_XSS**</p><p></p>|
 
-# **Testing  method:** 
+## **Testing  method:** 
 When add the script into url the hole things is reflected . so, lots of phishing  attack has to be demonstrate though it. 
 
 `[http://demo.testfire.net/search.jsp?query=<script>alert(document.lastModified);</script](http://demo.testfire.net/search.jsp?query=%3cscript%3ealert\(document.lastModified\);%3c/script)>`
